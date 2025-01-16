@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundo Degradê Claro para Branco</title>
-  <style>
-    body {
-      /* Degradê linear de branco para amarelo claro */
-      background: linear-gradient(to bottom, #fffacd, #ffff, #fffacd); /* Branco para amarelo claro */
-      height: 100vh; /* Ocupa toda a altura da tela */
-      margin: 0;
-    }
-      h1 {
-      font-family: 'Century Gothic', sans-serif; 
-      font-size: 4rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedidost</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #FFF9B1, rgb(238, 247, 194), #FFF9B1);
+        }
+        
+        h1 {
+            font-family: 'Century Gothic', Courier, monospace; /* Mudando a fonte do h1 */
+            color: #333;
+            font-size: 5rem;
+            text-align: center; /* Centralizando o título */
+        }
+
+        p {
+            font-family: 'Century Gothic', Courier, monospace;
+        }
+    </style>
 </head>
 <body>
-  <h1>Bem-vindo ao Restaurante!</h1>
-
-  <div class="formulario">
-    <h2>Escolha sua mesa e informe o nome do cliente</h2>
-    <label for="mesaSelect">Selecione a Mesa:</label>
-    <select id="mesaSelect">
-      <option value="1">Mesa 1</option>
-      <option value="2">Mesa 2</option>
-      <option value="3">Mesa 3</option>
+    <h1>Cardápio</h1>
+    <br><br>
+    <table id="tabela_pratos">
+    </table>
+    <br><br>
+    <label for="">Selecione a mesa:</label>
+    <select id="mesa">
+        <option value="">Selecione a mesa...</option>
     </select>
-
-    <label for="clienteNome">Nome do Cliente:</label>
-    <input type="text" id="clienteNome" placeholder="Digite o nome do cliente" />
-
-    <button onclick="reservarMesa()">Reservar Mesa e Calcular Conta</button>
-  </div>
-
-  <div id="mensagem" class="mensagem"></div>
-  
-  <script type="module" src="script.js"></script>
+    <br><br>
+    <div>Total: ...</div>
+    <br><br>
+    <input type="button" value="Finalizar" onclick="Salvar_pedido()">
+    <script type="module" src="script.js"></script>
 </body>
 </html>
