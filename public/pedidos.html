@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundo Degradê Claro para Branco</title>
+  <style>
+    body {
+      /* Degradê linear de branco para amarelo claro */
+      background: linear-gradient(to bottom, #fffacd, #ffff, #fffacd); /* Branco para amarelo claro */
+      height: 100vh; /* Ocupa toda a altura da tela */
+      margin: 0;
+    }
+      h1 {
+      font-family: 'Century Gothic', sans-serif; 
+      font-size: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Restaurante!</h1>
+
+  <div class="formulario">
+    <h2>Escolha sua mesa e informe o nome do cliente</h2>
+    <label for="mesaSelect">Selecione a Mesa:</label>
+    <select id="mesaSelect">
+      <option value="1">Mesa 1</option>
+      <option value="2">Mesa 2</option>
+      <option value="3">Mesa 3</option>
+    </select>
+
+    <label for="clienteNome">Nome do Cliente:</label>
+    <input type="text" id="clienteNome" placeholder="Digite o nome do cliente" />
+
+    <button onclick="reservarMesa()">Reservar Mesa e Calcular Conta</button>
+  </div>
+
+  <div id="mensagem" class="mensagem"></div>
+  
+  <script type="module" src="script.js"></script>
+</body>
+</html>
