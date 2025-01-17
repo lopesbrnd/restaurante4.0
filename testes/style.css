@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.mesas {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    gap: 15px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.mesa {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mesa.disponivel {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.mesa.ocupada {
+    background-color: #F44336;
+    color: white;
+}
+
+.mesa:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.status-mensagem {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .mesas {
+        grid-template-columns: repeat(3, 120px);
+    }
+}
+
+
+
