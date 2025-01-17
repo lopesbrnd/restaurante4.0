@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="bora.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Restaurante</h1>
+        
+        <section class="cardapio">
+            <h2>Cardápio</h2>
+            <ul id="cardapioList"></ul>
+        </section>
+        
+        <section class="pedido">
+            <h2>Pedido</h2>
+            <button onclick="restaurante.finalizarPedido()">Finalizar Pedido</button>
+            <div id="totalPedido"></div>
+        </section>
+        
+        <section class="reserva">
+            <h2>Reserva de Mesa</h2>
+            <input type="number" id="numeroMesa" placeholder="Escolha o número da mesa (1-10)">
+            <button onclick="restaurante.reservarMesa()">Reservar Mesa</button>
+            <div id="reservaMensagem" class="reservaMensagem"></div>
+        </section>
+
+        <section class="garcom">
+            <h2>Escolher Garçom</h2>
+            <select id="garcomSelect">
+                <option value="Garçom 1">facão</option>
+                <option value="Garçom 2">bernadete</option>
+                <option value="Garçom 3">micael</option>
+            </select>
+            <button onclick="restaurante.escolherGarcom()">Escolher Garçom</button>
+            <div id="garcomMensagem"></div>
+        </section>
+    </div>
+
+    <script src="bora.js"></script>
+</body>
+</html>
