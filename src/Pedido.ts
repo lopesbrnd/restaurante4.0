@@ -1,19 +1,42 @@
 import { Prato } from "./Prato";
 import { Cliente } from "./Cliente";
+
 export class Pedido {
-    cliente: Cliente;
-    pratos: Prato[];
+    private cliente: Cliente;   // Renomeado para evitar conflito com o getter/setter
+    private itensPrato: Prato[];  // Renomeado para evitar conflito com o getter/setter
 
     constructor(cliente: Cliente) {
         this.cliente = cliente;
-        this.pratos = [];
+        this.itensPrato = [];
     }
 
+    // Getter de cliente
+    get cliente(): Cliente{
+        return this.cliente;
+    }
+
+    // Setter de cliente
+    set cliente(cliente: Cliente) {
+        this.cliente = cliente;
+    }
+
+    // Getter de pratos
+    get pratos(): Prato[] {
+        return this.itensPrato;
+    }
+
+    // Setter de pratos
+    set pratos(pratos: Prato[]) {
+        this.itensPrato = pratos;
+    }
+
+    // Método para adicionar prato
     adicionarPrato(prato: Prato): void {
-        this.pratos.push(prato);
+        this.itensPrato.push(prato);
     }
 
+    // Método para calcular o total
     calcularTotal(): number {
-        return this.pratos.reduce((total, prato) => total + (prato.preco*prato.quantidade), 0);
+        return this.itensPrato.reduce((total, prato) => total + (prato.preco * prato.quantidade), 0);
     }
 }
