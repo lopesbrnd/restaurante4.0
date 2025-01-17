@@ -35,8 +35,8 @@ export class Pedido {
         this.itensPrato.push(prato);
     }
 
-    // Método para calcular o total
-    calcularTotal(): number {
-        return this.itensPrato.reduce((total, prato) => total + (prato.preco * prato.quantidade), 0);
+    calcularSomaPratos(pratos: Prato[]): string {
+        const total = pratos.reduce((total, prato) => total + (prato.preco * prato.quantidade), 0);
+        return total.toFixed(2);  // Retorna o valor com 2 casas decimais
     }
 }
