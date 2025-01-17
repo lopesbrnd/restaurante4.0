@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            padding: 2em;
+        }
+        h2 {
+            color: #343a40;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #ffffff;
+            margin: 0.5em 0;
+            padding: 1em;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 0.5em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .input-group {
+            margin-bottom: 1em;
+        }
+        .input-group input, .input-group select {
+            padding: 0.5em;
+            width: 200px;
+            margin-right: 1em;
+        }
+        .input-group button {
+            padding: 0.5em;
+            background-color: #007bff;
+            color: white;
+        }
+        #totalPedido {
+            font-size: 1.2em;
+            margin-top: 1em;
+        }
+        #reservaMensagem, #garcomMensagem {
+            font-size: 1.2em;
+            margin-top: 1em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bem-vindo ao Restaurante!</h1>
+</header>
+
+<main>
+    <h2>Cardápio</h2>
+    <ul id="cardapioList"></ul>
+
+    <div class="input-group">
+        <label for="numeroMesa">Escolha a Mesa (1 a 10):</label>
+        <input type="number" id="numeroMesa" min="1" max="10">
+        <button onclick="restaurante.reservarMesa()">Reservar Mesa</button>
+        <p id="reservaMensagem"></p>
+    </div>
+
+    <div class="input-group">
+        <label for="garcomSelect">Escolha o Garçom:</label>
+        <select id="garcomSelect">
+            <option value="Garçom 1">Garçom 1</option>
+            <option value="Garçom 2">Garçom 2</option>
+            <option value="Garçom 3">Garçom 3</option>
+        </select>
+        <button onclick="restaurante.escolherGarcom()">Escolher Garçom</button>
+        <p id="garcomMensagem"></p>
+    </div>
+
+    <button onclick="restaurante.finalizarPedido()">Finalizar Pedido</button>
+    <p id="totalPedido"></p>
+</main>
+
+<script src="jszinho.js"></script>
+
+</body>
+</html>
