@@ -4,35 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pedidost</title>
+    <title>menu de pedidos</title>
     <style>
-        body {
+    @font-face {
+    font-family: 'Gagalin';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gagalin'), url('https://fonts.cdnfonts.com/s/57473/Gagalin-Regular.woff') format('woff');
+    }
+        body{
             height: 100vh;
             margin: 0;
             background: linear-gradient(to bottom, #FFF9B1, rgb(238, 247, 194), #FFF9B1);
+            font-family: Gagalin, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         h1 {
-            font-family: 'Century Gothic', Courier, monospace; /* Mudando a fonte do h1 */
-            color: #333;
+            font-family: Gagalin, 'sans-serif'; /* Mudando a fonte do h1 */
+            color: #000000;
             font-size: 5rem;
             text-align: center; /* Centralizando o título */
         }
 
-        p {
-            font-family: 'Century Gothic', Courier, monospace;
+        .tabela{ 
+            border-spacing: 100px 15px;
+            align-items: center;
+            
+
         }
+
+        p {
+            font-family: Gagalin, 'sans-serif' ;
+
+        }
+   
     </style>
 </head>
 <body>
-    <h1>Cardápio</h1>
+    <h1>Menu de Pedidos</h1>
     <br><br>
-    <table id="tabela_pratos">
-    </table>
+    <div class = tabela >
+        <table id="tabela_pratos"></table>
+    </div>
     <br><br>
     <label for="">Selecione a mesa:</label>
     <select id="mesa">
         <option value="">Selecione a mesa...</option>
+    </select>
+    <br><br>
+    <label for="">Selecione o Garçom:</label>
+    <select id="garcom">
+        <option value="">Selecione o garcom...</option>
     </select>
     <br><br>
     <div>Total: ...</div>
