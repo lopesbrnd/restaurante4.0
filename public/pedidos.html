@@ -31,6 +31,13 @@
             text-align: center; /* Centralizando o título */
         }
 
+        .tabela{ 
+            border-spacing: 100px 15px;
+            align-items: center;
+            
+
+        }
+
         p {
             font-family: Gagalin, 'sans-serif' ;
 
@@ -41,13 +48,16 @@
 <body>
     <h1>Menu de Pedidos</h1>
     <br><br>
-    <table id="tabela_pratos">
-    </table>
+    <div class = tabela >
+        <table id="tabela_pratos"></table>
+    </div>
     <br><br>
     <label for="">Selecione a mesa:</label>
     <select id="mesa">
         <option value="">Selecione a mesa...</option>
     </select>
+    <br><br>
+    <label for="">Selecione o Garçom:</label>
     <select id="garcom">
         <option value="">Selecione o garcom...</option>
     </select>
